@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql');
-const Database = require('./db/queries');
+const Database = require('./queries');
 
 require('dotenv').config(); 
 
