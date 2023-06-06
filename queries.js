@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 //Database class creates the connection with the database and other SQL query functions 
 class Database {
