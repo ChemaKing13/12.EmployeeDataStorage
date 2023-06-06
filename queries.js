@@ -37,5 +37,5 @@ class Database {
   }
 }
 
-//database class is exported, allowing other fules to use it 
+//database class is exported, allowing other files to use it 
 module.exports = Database;
