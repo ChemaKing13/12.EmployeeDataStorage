@@ -10,17 +10,18 @@ class Database {
   //an array of employee objects 
   getAllEmployees() {
     return new Promise((resolve, reject) => {
-      this.connection.query('SELECT * FROM employees', (error, results) => {
+      this.connection.query('SELECT * FROM employee', (error, results) => {
         if (error) reject(error);
         resolve(results);
       });
     });
+    
   }
   
   //this function insterst new employee into the  employee table
   addEmployee(employee) {
     return new Promise((resolve, reject) => {
-      this.connection.query('INSERT INTO employees SET ?', employee, (error, results) => {
+      this.connection.query('INSERT INTO employee SET ?', employee, (error, results) => {
         if (error) reject(error);
         resolve(results);
       });
@@ -29,7 +30,7 @@ class Database {
   //this function updates the role id of the employee 
   updateEmployeeRole(employeeId, roleId) {
     return new Promise((resolve, reject) => {
-      this.connection.query('UPDATE employees SET role_id = ? WHERE id = ?', [roleId, employeeId], (error, results) => {
+      this.connection.query('UPDATE employee SET role_id = ? WHERE id = ?', [roleId, employeeId], (error, results) => {
         if (error) reject(error);
         resolve(results);
       });
