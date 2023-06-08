@@ -1,7 +1,6 @@
 const inquirer = require('inquirer');
-const departmentActions = require('../lib/departmentActions'); 
-const employeeActions = require('../lib/employeeActions'); 
-const roleActions = require('../lib/roleActions'); 
+const { viewAllDepartments, addDepartment } = require('../lib/departmentActions'); 
+
 
 function startApp() {
     inquirer
@@ -34,8 +33,10 @@ function startApp() {
             case 'Add role':
                 break; 
             case 'View all departments': 
+                viewAllDepartments(); 
                 break; 
             case 'Add department': 
+                addDepartment(); 
                 break; 
             case 'Quit': 
                 console.log('Goodbye!'); 
