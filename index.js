@@ -1,5 +1,5 @@
-const { startApp } = require('./app');
-const figlet = require('figlet');
+const { startApp } = require('./app'); //imports the startApp function from app.js
+const figlet = require('figlet'); //imports the figlet module, that will generate the ASCCI art
 
 // Function to display the project name as ASCII art
 function displayProjectName() {

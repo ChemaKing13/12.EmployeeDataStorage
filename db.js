@@ -11,7 +11,7 @@ function addDepartment(name, callback) {
 }
 
 //function to retrieve all employees 
-function getAllEmployees(callback) {
+function viewAllEmployees(callback) {
     dbConnection.query('SELECT * FROM employee', callback); 
 }
 
@@ -24,7 +24,7 @@ function addEmployee(first_name, last_name, role_id, manager_id, callback) {
 }
 
 //function to retrieve all roles 
-function getAllRoles(callback) {
+function viewAllRoles(callback) {
     dbConnection.query('Select * FROM role', callback); 
 }
 
@@ -38,10 +38,10 @@ function addRole(title, salary, departmentId, callback) {
 }
 
 module.exports = {
-    getAllDepartments, 
+    getAllDepartments,
     addDepartment,
-    getAllEmployees, 
+    viewAllEmployees,
     addEmployee,
-    getAllRoles,
+    viewAllRoles,
     addRole,
-}; 
+  };
