@@ -1,8 +1,3 @@
-//asciiArt 
-const asciiArt = require()
+const { startApp } = require('./app'); 
 
-const promptUser = require('promptUser')
-
-console.log(asciiArt); 
-
-promptUser(); 
+startApp(); 

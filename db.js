@@ -1,4 +1,4 @@
-const dbConnection = require('./config/connection'); 
+const { dbConnection } = require('./config/connection'); 
 
 //function to retrieve all departments
 function getAllDepartments(callback) {

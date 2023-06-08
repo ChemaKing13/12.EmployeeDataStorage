@@ -6,7 +6,7 @@ VALUES  ('Engineering'),
         ('Quality Assurance');
 
 -- Insert records into the role table
-INSERT INTO roles (title, salary, department_id) VALUES
+INSERT INTO role (title, salary, department_id) VALUES
 ('Software Engineer', 80000, 1),
 ('Product Manager', 90000, 2),
 ('System Administrator', 70000, 3),

@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
-const { viewAllDepartments, addDepartment } = require('../lib/departmentActions'); 
-const { viewAllEmployees, addEmployee, updateEmployeeRole } = require('../lib/employeeActions'); 
-const { viewAllRoles, addRole} = require('../lib/roleActions'); 
+const { viewAllDepartments, addDepartment } = require('./lib/departmentActions'); 
+const { viewAllEmployees, addEmployee, updateEmployeeRole } = require('./lib/employeeActions'); 
+const { viewAllRoles, addRole} = require('./lib/roleActions'); 
 
 
 function startApp() {
@@ -18,13 +18,14 @@ function startApp() {
                     'View all roles', 
                     'View all departments', 
                     'Add department', 
+                    'Add role',
                     'Quit', 
                 ],
             },
         ])
     .then((answers) => {
         switch (answers.action) {
-            case 'View all employers': 
+            case 'View all employees': 
                 viewAllEmployees(); 
                 break; 
             case 'Add employee':
@@ -55,4 +56,4 @@ function startApp() {
     }); 
 }
 
-startApp(); 
+module.exports = { startApp }; 
