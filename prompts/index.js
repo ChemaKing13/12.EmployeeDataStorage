@@ -1,4 +1,7 @@
-const inquirer = require('inquirer'); 
+const inquirer = require('inquirer');
+const departmentActions = require('../lib/departmentActions'); 
+const employeeActions = require('../lib/employeeActions'); 
+const roleActions = require('../lib/roleActions'); 
 
 function startApp() {
     inquirer
