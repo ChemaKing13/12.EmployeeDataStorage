@@ -1,7 +1,7 @@
 const { dbConnection } = require('./config/connection'); 
 
 //function to retrieve all departments
-function getAllDepartments(callback) {
+function viewAllDepartments(callback) {
     dbConnection.query('Select * FROM department', callback); 
 }
 
@@ -38,7 +38,7 @@ function addRole(title, salary, departmentId, callback) {
 }
 
 module.exports = {
-    getAllDepartments,
+    viewAllDepartments,
     addDepartment,
     viewAllEmployees,
     addEmployee,
