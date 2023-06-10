@@ -31,7 +31,7 @@ function updateEmployeeRole(employeeId, roleId, callback) {
       [roleId, employeeId],
       callback
     );
-  }
+}
   
 
 //function to retrieve all roles 
@@ -48,6 +48,12 @@ function addRole(title, salary, departmentId, callback) {
     ); 
 }
 
+// Function to retrieve all managers
+function viewAllManagers(callback) {
+    dbConnection.query('SELECT * FROM employee WHERE manager_id IS NOT NULL', callback);
+}
+  
+
 module.exports = {
     viewAllDepartments,
     addDepartment,
@@ -56,4 +62,5 @@ module.exports = {
     addEmployee,
     viewAllRoles,
     addRole,
-  };
+    viewAllManagers,
+};
