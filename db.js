@@ -15,6 +15,7 @@ function viewAllEmployees(callback) {
     dbConnection.query('SELECT * FROM employee', callback); 
 }
 
+//function to add an employee
 function addEmployee(first_name, last_name, role_id, manager_id, callback) {
     dbConnection.query(
         'INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)', 
@@ -22,6 +23,16 @@ function addEmployee(first_name, last_name, role_id, manager_id, callback) {
         callback
     ); 
 }
+
+// Function to update an employee's role
+function updateEmployeeRole(employeeId, roleId, callback) {
+    dbConnection.query(
+      'UPDATE employee SET role_id = ? WHERE id = ?',
+      [roleId, employeeId],
+      callback
+    );
+  }
+  
 
 //function to retrieve all roles 
 function viewAllRoles(callback) {
@@ -41,6 +52,7 @@ module.exports = {
     viewAllDepartments,
     addDepartment,
     viewAllEmployees,
+    updateEmployeeRole,
     addEmployee,
     viewAllRoles,
     addRole,
