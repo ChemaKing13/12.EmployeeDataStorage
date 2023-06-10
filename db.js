@@ -1,7 +1,7 @@
 const { dbConnection } = require('./config/connection'); 
 
 //function to retrieve all departments
-function getAllDepartments(callback) {
+function viewAllDepartments(callback) {
     dbConnection.query('Select * FROM department', callback); 
 }
 
@@ -15,6 +15,7 @@ function viewAllEmployees(callback) {
     dbConnection.query('SELECT * FROM employee', callback); 
 }
 
+//function to add an employee
 function addEmployee(first_name, last_name, role_id, manager_id, callback) {
     dbConnection.query(
         'INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)', 
@@ -22,6 +23,16 @@ function addEmployee(first_name, last_name, role_id, manager_id, callback) {
         callback
     ); 
 }
+
+// Function to update an employee's role
+function updateEmployeeRole(employeeId, roleId, callback) {
+    dbConnection.query(
+      'UPDATE employee SET role_id = ? WHERE id = ?',
+      [roleId, employeeId],
+      callback
+    );
+}
+  
 
 //function to retrieve all roles 
 function viewAllRoles(callback) {
@@ -37,11 +48,19 @@ function addRole(title, salary, departmentId, callback) {
     ); 
 }
 
+// Function to retrieve all managers
+function viewAllManagers(callback) {
+    dbConnection.query('SELECT * FROM employee WHERE manager_id IS NOT NULL', callback);
+}
+  
+
 module.exports = {
-    getAllDepartments,
+    viewAllDepartments,
     addDepartment,
     viewAllEmployees,
+    updateEmployeeRole,
     addEmployee,
     viewAllRoles,
     addRole,
-  };
+    viewAllManagers,
+};
