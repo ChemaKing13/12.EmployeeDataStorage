@@ -4,14 +4,24 @@
 
 The Employee Tracker is a web-based application designed to help businesses manage their employee data effectively. It provides a user-friendly interface to view, add, update, and delete employee records, departments, and roles. 
 
+## Features 
+
+* Centralized Employee Data
+* Efficient Employee Tracking
+* Improved Decision Making
+* Increased Productivity
+* Better Communication and Collaboration
+* Data Security and Privacy
 
 ## Table of Contents
 
 - [Description](#description)
+- [Features](#features)
 - [Built With](#built-with)
 - [License](#license)
 - [Credits](#credits)
-- [Demo](#Demo)
+- [Demo](#demo)
+- [Preview] (#preview)
 
 
 ## Built With
@@ -41,6 +51,9 @@ In order to complete this challenge, I applied the knowledge seen in class, as w
 
 ## Demo 
 https://drive.google.com/file/d/1wWbst2lDyXGQC-S0XkxzaedNQ9GuHdLV/view
+
+## Preview 
+<img width="832" alt="Screenshot 2023-06-11 at 17 12 56" src="https://github.com/ChemaKing13/12.EmployeeDataStorage/assets/124849302/e89fe78a-06ec-463f-82e3-7010039c92cd">
 
 
 
