@@ -4,8 +4,6 @@
 
 The Employee Tracker is a web-based application designed to help businesses manage their employee data effectively. It provides a user-friendly interface to view, add, update, and delete employee records, departments, and roles. 
 
-⚠️ **Important: This project is still under construction and is a work in progress.** ⚠️
-
 
 ## Table of Contents
 
@@ -13,6 +11,7 @@ The Employee Tracker is a web-based application designed to help businesses mana
 - [Built With](#built-with)
 - [License](#license)
 - [Credits](#credits)
+- [Demo](#Demo)
 
 
 ## Built With
@@ -37,6 +36,9 @@ In order to complete this challenge, I applied the knowledge seen in class, as w
 - https://stackoverflow.com/questions/74076456/running-a-mysql-seed-file-in-node-js
 - https://www.npmjs.com/package/inquirer
 - https://www.w3schools.com/nodejs/nodejs_mysql.asp
+
+## Demo 
+https://drive.google.com/file/d/1wWbst2lDyXGQC-S0XkxzaedNQ9GuHdLV/view
 
 
 
