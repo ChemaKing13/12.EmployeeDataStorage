@@ -36,6 +36,8 @@ In order to complete this challenge, I applied the knowledge seen in class, as w
 - https://stackoverflow.com/questions/74076456/running-a-mysql-seed-file-in-node-js
 - https://www.npmjs.com/package/inquirer
 - https://www.w3schools.com/nodejs/nodejs_mysql.asp
+- https://www.npmjs.com/package/figlet
+- https://www.w3schools.com/sql/
 
 ## Demo 
 https://drive.google.com/file/d/1wWbst2lDyXGQC-S0XkxzaedNQ9GuHdLV/view
