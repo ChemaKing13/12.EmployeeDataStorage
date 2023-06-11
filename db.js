@@ -47,13 +47,39 @@ function addRole(title, salary, departmentId, callback) {
         callback
     ); 
 }
-
 // Function to retrieve all managers
 function viewAllManagers(callback) {
-    dbConnection.query('SELECT * FROM employee WHERE manager_id IS NOT NULL', callback);
+    dbConnection.query(
+      'SELECT id, first_name, last_name FROM employee WHERE manager_id IS NULL',
+      callback
+    );
 }
-  
 
+function getManagersForEmployees(employeeIds, callback) {
+    const query = `
+      SELECT e.id, e.first_name, e.last_name, m.id AS manager_id, m.first_name AS manager_first_name, m.last_name AS manager_last_name
+      FROM employee e
+      LEFT JOIN employee m ON e.manager_id = m.id
+      WHERE e.id IN (${employeeIds.map(() => '?').join(',')})
+    `;
+    const values = [...employeeIds];
+  
+    dbConnection.query(query, values, (err, results) => {
+      if (err) {
+        callback(err);
+        return;
+      }
+  
+      const managers = results.map((row) => ({
+        id: row.manager_id,
+        first_name: row.manager_first_name,
+        last_name: row.manager_last_name,
+      }));
+  
+      callback(null, managers);
+    });
+  }
+    
 module.exports = {
     viewAllDepartments,
     addDepartment,
@@ -63,4 +89,5 @@ module.exports = {
     viewAllRoles,
     addRole,
     viewAllManagers,
+    getManagersForEmployees,
 };
